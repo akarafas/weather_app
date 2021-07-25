@@ -2,3 +2,6 @@
   font-size: 30px;
   text-align: center;
 }
+.mat-drawer-content {
+  padding-left: 20px;
+}
