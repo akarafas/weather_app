@@ -1,16 +1,15 @@
-<!--<p>weather works!</p>-->
-<mat-card class="card">
-<!--going to have title then split panel with side nav and main stuff-->
-  <mat-card-title class="title">Weather App</mat-card-title>
-  <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-    <mat-drawer-content>Main content</mat-drawer-content>
-  </mat-drawer-container>
-</mat-card>
 <div class="page">
-  <div class="page-header"></div>
+  <div class="page-header">Weather Forecast</div>
   <div class="page-body">
-<!--    cities-->
+    <div class="page-body__sidebar">
+      <ul class="cities-list">
+        <li class="cities-list __item" *ngFor="let city of cities; index as i" (click)="onChooseCity(i)">
+          {{ city.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="page-body__details">
+      <app-weather-details *ngIf="chosenCity >= 0" [forecast]="cities[chosenCity].forecast"></app-weather-details>
+    </div>
   </div>
 </div>
-

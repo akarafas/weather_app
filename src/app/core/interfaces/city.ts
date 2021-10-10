@@ -1,6 +1,6 @@
-import { Forcast } from './forcast';
+import { Forecast } from './forecast';
 export interface City {
   name: string;
-  forcast: Forcast;
+  forecast: Forecast;
 }
 
